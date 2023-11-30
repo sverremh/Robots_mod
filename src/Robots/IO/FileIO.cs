@@ -244,6 +244,7 @@ public static class FileIO
                 _ => throw new ArgumentException($" Manufacturer '{manufacturer}' not supported."),
             },
             "Positioner" => new Positioner(model, manufacturer, payload, basePlane, baseMesh, joints, movesRobot),
+            "HorizontalPositioner" => new HorizontalPositioner(model, manufacturer, payload, basePlane, baseMesh, joints, movesRobot),
             "Track" => new Track(model, manufacturer, payload, basePlane, baseMesh, joints, movesRobot),
             "Custom" => new Custom(model, manufacturer, payload, basePlane, baseMesh, joints, movesRobot),
             _ => throw new ArgumentException($" Unknown mechanism type '{element.Name}'.")
